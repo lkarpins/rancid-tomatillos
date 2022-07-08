@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import movieData from './movieData';
-import { ReactDOM } from 'react';
 import logo from './logo.svg';
+import Navbar from './Navbar';
 import './App.css';
 import { render } from 'react-dom';
 
@@ -14,15 +14,15 @@ class App extends Component {
     }
   }
   //stuff 
-}
+
 
 render() {
-  return(
+  return (
     <main className='App'>
     <Navbar />
-
     </main>
   )
-  }
+}
+}
 
 export default App;
