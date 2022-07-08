@@ -4,6 +4,7 @@ import logo from './logo.svg';
 import Navbar from './Navbar';
 import './App.css';
 import { render } from 'react-dom';
+import MovieLibrary from './MovieLibrary';
 
 
 class App extends Component {
@@ -20,6 +21,7 @@ render() {
   return (
     <main className='App'>
     <Navbar />
+    <MovieLibrary />
     </main>
   )
 }
