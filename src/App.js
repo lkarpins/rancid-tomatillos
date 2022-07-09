@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
 import MovieLibrary from './MovieLibrary';
-import movieData from './movieData';
 import MovieSummary from './MovieSummary';
 import './App.css';
 
@@ -62,11 +61,6 @@ fetchSpecificMovie = (id) => {
       })
     })
 }
-
-  // displayMovieSummary = (id) => {
-  //   const selectedMovie =  this.state.movies.filter(movie => movie.id === id) 
-  //     this.setState({movieSummary: selectedMovie, clicked: true});
-  // }
 
   returnToMain = () => {
     this.setState({movieSummary: null}
