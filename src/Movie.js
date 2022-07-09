@@ -1,15 +1,14 @@
 import React from "react";
-import MovieLibrary from "./MovieLibrary";
 import './Movie.css'
 
 const Movie = (movies) => {
-console.log('MOVIE MOVIE',movies)
     return (
-        <div>
+        <div className="movie">
             <h2>{movies.title}</h2>
+            <img src={movies.poster_path}></img>
+            <p></p>
         </div>
     )
-
 }
 
 export default Movie;

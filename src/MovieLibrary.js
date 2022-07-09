@@ -4,7 +4,6 @@ import './MovieLibrary.css'
 
 
 const MovieLibrary = ({movies}) => {
-    console.log(movies)
    const getMovie = movies.map(movie => {
     return (
         <Movie 
