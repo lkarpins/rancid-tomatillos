@@ -3,14 +3,26 @@ import Movie from "./Movie";
 import './MovieLibrary.css'
 
 
-const MovieLibrary = (props) => {
-
+const MovieLibrary = ({movies}) => {
+    console.log(movies)
+   const getMovie = movies.map(movie => {
     return (
-        <div className="movie-library">
-        <Movie />
-        </div>
+        <Movie 
+        id={movie.id}
+        poster_path={movie.poster_path}
+        backdrop_path={movie.backdrop_path}
+        title={movie.title}
+        average_rating={movie.average_rating}
+        release_date={movie.release_date}
+        />
     )
+})
+
+return (
+    <div className="movie-container">
+        {getMovie}
+    </div>
+)
 
 }
-
 export default MovieLibrary

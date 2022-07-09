@@ -13,27 +13,12 @@ class App extends Component {
     }
   }
   //stuff 
-// componentDidMount = () => {
-//   this.setState({
-//     movies: movieData.movies.map(movie => movie)
-//   })
-//   console.log(this.state)
-//   console.log(movieData.movies.map(movie => movie))
-// } 
-
-// populateMovies = () => {
-//   this.setState({
-//     movies: movieData.movies.map(movie => movie)
-//   })
-//   console.log(this.state)
-// }
 
 render() {
-  console.log(this.state)
   return (
     <main className='App'>
     <Navbar />
-    <MovieLibrary />
+    <MovieLibrary movies={this.state.movies}/>
     </main>
   )
 }
