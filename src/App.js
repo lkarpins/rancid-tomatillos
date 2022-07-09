@@ -1,24 +1,36 @@
 import React, { Component } from 'react';
-import movieData from './movieData';
 import Navbar from './Navbar';
-import './App.css';
 import MovieLibrary from './MovieLibrary';
+import movieData from './movieData';
+import MovieSummary from './MovieSummary';
+import './App.css';
 
 
 class App extends Component {
   constructor() {
   super()
     this.state = {
-      movies: movieData.movies.map(movie => movie)
+      movies: movieData.movies,
+      clicked: false
     }
   }
-  //stuff 
+  
+  //stuff
+  displayMovieSummary = (id) => {
+    const selectedMovie = this.state.movies.filter(movie => movie.id === id) 
+      this.setState({movies: selectedMovie, clicked: true});
+  }
+
+  returnToMain = () => {
+    this.setState({movies: movieData.movies, clicked: false}
+      )
+  }
 
 render() {
   return (
     <main className='App'>
     <Navbar />
-    <MovieLibrary movies={this.state.movies}/>
+    {this.state.clicked ? (<MovieSummary movies={this.state.movies} returnToMain={this.returnToMain}/>) : (<MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>)}
     </main>
   )
 }
