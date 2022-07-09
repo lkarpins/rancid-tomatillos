@@ -2,25 +2,25 @@ import React from 'react';
 import MoviePage from './MoviePage.js'
 import './MovieSummary.css';
 
-const MovieSummary = ({movies, returnToMain}) => {
-    const chosenMovie = movies.map(movie => {
+const MovieSummary = ({movieSummary, returnToMain}) => {
             return (
             <MoviePage
-            title={movie.title}
-            backdrop_path={movie.backdrop_path}
-            average_rating={movie.average_rating}
-            release_date={movie.release_date}
-            id={movie.id}
-            key={movie.id}
+            title={movieSummary.title}
+            backdrop_path={movieSummary.backdrop_path}
+            average_rating={movieSummary.average_rating}
+            release_date={movieSummary.release_date}
+            id={movieSummary.id}
+            key={movieSummary.id}
             returnToMain={returnToMain}
+            budget={movieSummary.budget}
+            overview={movieSummary.overview}
+            genres={movieSummary.genres}
+            revenue={movieSummary.revenue}
+            runtime={movieSummary.runtime}
+            tagline={movieSummary.tagline}
+
             />
         )
-    })
-    return (
-        <div className='movie-summary'>
-        {chosenMovie}
-        </div>
-    )
-}
+    }
 
 export default MovieSummary;

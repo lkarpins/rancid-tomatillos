@@ -3,7 +3,7 @@ import Movie from "./Movie";
 import './MovieLibrary.css'
 
 
-const MovieLibrary = ({ movies, displayMovieSummary}) => {
+const MovieLibrary = ({ movies, fetchSpecificMovie}) => {
    const getMovie = movies.map(movie => {
     return (
         <Movie 
@@ -14,7 +14,7 @@ const MovieLibrary = ({ movies, displayMovieSummary}) => {
         title={movie.title}
         average_rating={movie.average_rating}
         release_date={movie.release_date}
-        displayMovieSummary={displayMovieSummary}
+        fetchSpecificMovie={fetchSpecificMovie}
         />
     )
 })
