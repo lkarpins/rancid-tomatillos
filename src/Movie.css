@@ -1,3 +1,7 @@
 .movie {
+    display: flex;
     font-weight: bold;
+    flex-direction: column;
+    justify-content: flex-end;
 }
+
