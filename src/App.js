@@ -10,21 +10,22 @@ class App extends Component {
   constructor() {
   super()
     this.state = {
-      movies: movieData.movies
+      movies: movieData.movies,
+      clicked: false
     }
   }
   
   //stuff
   displayMovieSummary = (id) => {
     const selectedMovie = this.state.movies.filter(movie => movie.id === id) 
-      this.setState({movies: selectedMovie});
+      this.setState({movies: selectedMovie, clicked: true});
   }
 
 render() {
   return (
     <main className='App'>
     <Navbar />
-    {this.state.movies.selectedMovie ? (<MovieSummary movies={this.state.movies}/>) : (<MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>)}
+    {this.state.clicked ? (<MovieSummary movies={this.state.movies}/>) : (<MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>)}
     </main>
   )
 }
