@@ -21,11 +21,16 @@ class App extends Component {
       this.setState({movies: selectedMovie, clicked: true});
   }
 
+  returnToMain = () => {
+    this.setState({movies: movieData.movies, clicked: false}
+      )
+  }
+
 render() {
   return (
     <main className='App'>
     <Navbar />
-    {this.state.clicked ? (<MovieSummary movies={this.state.movies}/>) : (<MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>)}
+    {this.state.clicked ? (<MovieSummary movies={this.state.movies} returnToMain={this.returnToMain}/>) : (<MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>)}
     </main>
   )
 }
