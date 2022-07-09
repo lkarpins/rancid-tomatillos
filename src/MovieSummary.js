@@ -2,18 +2,14 @@ import React from 'react';
 import Movie from './Movie.js'
 import './MovieSummary.css';
 
-const MovieSummary = ({ title, backdrop_path, average_rating, release_date }) => {
+const MovieSummary = ({ id, title, backdrop_path, average_rating, release_date }) => {
+    console.log('yes')
     return (
         <div className='movie-summary'>
-            <h2>{title}</h2>
-            <img src={backdrop_path}></img>
-            <p>{average_rating}</p>
-            <p>{release_date}</p>
+           <h3>{title}</h3>
         </div>
     )
 }
-
-
 
 
 export default MovieSummary; 
