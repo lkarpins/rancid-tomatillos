@@ -13,12 +13,19 @@ class App extends Component {
     }
   }
   //stuff
+  displayMovieSummary = (event) => {
+    console.log('yes')
+    event.preventDefault()
+    const selectedMovie = this.state.movies.find(movie => movie.id === event.target.id) 
+      this.setState({movies: selectedMovie});
+  }
 
 render() {
   return (
     <main className='App'>
     <Navbar />
-    <MovieLibrary movies={this.state.movies}/>
+    <MovieLibrary movies={this.state.movies} displayMovieSummary={this.displayMovieSummary}/>
+
     </main>
   )
 }
