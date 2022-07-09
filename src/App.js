@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import movieData from './movieData';
 import Navbar from './Navbar';
-import './App.css';
 import MovieLibrary from './MovieLibrary';
+import movieData from './movieData';
+import './App.css';
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
       movies: movieData.movies.map(movie => movie)
     }
   }
-  //stuff 
+  //stuff
 
 render() {
   return (
