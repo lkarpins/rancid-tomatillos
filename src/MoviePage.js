@@ -5,7 +5,7 @@ const MoviePage = ({ title, id, budget, backdrop_path, average_rating, release_d
     return (
         <div className="movie-page">
             <h2>{title}</h2>
-            <img className='backdrop-image' src={backdrop_path}/>
+            <img className='backdrop-image' src={backdrop_path} alt={backdrop_path}/>
             <p>⭐️ {average_rating.toFixed(1)}</p>
             <p>Release Date: {release_date}</p>
             <p>Overview: {overview}</p>
