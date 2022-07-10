@@ -5,3 +5,7 @@
     justify-content: flex-end;
 }
 
+.movie-poster {
+    cursor: pointer;
+    width: 20vw;
+}
