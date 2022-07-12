@@ -29,7 +29,7 @@ componentDidMount = () => {
       })
       .catch(error => {
         this.setState({
-          error: true
+          error: true,
         })
       })
       .finally(() => {
