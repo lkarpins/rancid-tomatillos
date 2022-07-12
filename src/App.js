@@ -14,7 +14,6 @@ class App extends Component {
       clicked: false,
       loading: false,
       movieSummaryLoading: false,
-      errorMessage: null,
       error: false
     }
   }
@@ -31,7 +30,6 @@ componentDidMount = () => {
       })
       .catch(error => {
         this.setState({
-          errorMessage: error.message,
           error: true
         })
       })
@@ -55,7 +53,6 @@ fetchSpecificMovie = (id) => {
     })
     .catch(error => {
       this.setState({
-        errorMessage: error.message,
         error: true
       })
     })
