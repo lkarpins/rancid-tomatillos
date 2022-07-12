@@ -15,6 +15,7 @@ const MovieLibrary = ({ movies, fetchSpecificMovie}) => {
         average_rating={movie.average_rating}
         release_date={movie.release_date}
         fetchSpecificMovie={fetchSpecificMovie}
+        data-cy="movie"
         />
     )
 })

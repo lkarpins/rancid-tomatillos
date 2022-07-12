@@ -1,14 +1,14 @@
 .App {
   text-align: center;
-  /* background-color: rgb(30, 30 , 30);
-  color: gold;
-  margin: 0; */
+  background: cover;
+  color: rgb(235, 202, 19);
+  margin: 0;
 }
-
-/* .App {
-  overflow: auto;
-} */
 
 img {
   width: 20vw;
+}
+
+html {
+  background-image: url('/public/curtain.jpg');
 }
