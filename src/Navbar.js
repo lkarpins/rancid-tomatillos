@@ -4,7 +4,7 @@ import React from "react";
 const Navbar = () => {
     return (
         <div className="navbar">
-            <h1>Rancid Tomatillos</h1>
+            <h1 className="title">Rancid Tomatillos</h1>
         </div>
     )
 
