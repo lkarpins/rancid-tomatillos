@@ -82,7 +82,6 @@ render() {
     returnToMain={this.returnToMain}/>) 
     : 
     (<MovieLibrary movies={this.state.movies} 
-    displayMovieSummary={this.displayMovieSummary} 
     fetchSpecificMovie={this.fetchSpecificMovie}/>)}
 
     {this.state.movieSummary ? (<MovieSummary movieSummary={this.state.movieSummary} returnToMain={this.returnToMain}/>) : (<MovieLibrary movies={this.state.movies} fetchSpecificMovie={this.fetchSpecificMovie}/>)}
