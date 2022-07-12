@@ -7,6 +7,7 @@ const MovieLibrary = ({ movies, fetchSpecificMovie}) => {
    const getMovie = movies.map(movie => {
     return (
         <Movie 
+        {...movies}
         id={movie.id}
         key={movie.id}
         poster_path={movie.poster_path}

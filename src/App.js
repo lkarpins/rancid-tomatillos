@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       movies: [],
       movieSummary: null,
-      clicked: false,
       loading: false,
       movieSummaryLoading: false,
       error: false
