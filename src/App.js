@@ -11,7 +11,6 @@ class App extends Component {
     this.state = {
       movies: [],
       movieSummary: null,
-      clicked: false,
       loading: false,
       movieSummaryLoading: false,
       errorMessage: null,
@@ -79,6 +78,7 @@ render() {
     <main className='App'>
     <Navbar data-cy="navbar"/>
     {this.state.error && <h1>SERIOUS PROBLEM!!! Please refresh.</h1>}
+
     {this.state.movieSummary 
     ? 
     (<MovieSummary movieSummary={this.state.movieSummary} 
@@ -87,6 +87,9 @@ render() {
     (<MovieLibrary movies={this.state.movies} 
     displayMovieSummary={this.displayMovieSummary} 
     fetchSpecificMovie={this.fetchSpecificMovie}/>)}
+
+    {this.state.movieSummary ? (<MovieSummary movieSummary={this.state.movieSummary} returnToMain={this.returnToMain}/>) : (<MovieLibrary movies={this.state.movies} fetchSpecificMovie={this.fetchSpecificMovie}/>)}
+
     </main>
   )
 }

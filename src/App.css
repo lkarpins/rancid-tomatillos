@@ -1,8 +1,8 @@
 .App {
   text-align: center;
-  background: cover;
-  color: rgb(235, 202, 19);
-  margin: 0;
+  overflow: auto;
+  color: gold;
+  margin: 0; 
 }
 
 img {
@@ -12,3 +12,4 @@ img {
 html {
   background-image: url('/public/curtain.jpg');
 }
+
