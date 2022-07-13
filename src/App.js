@@ -3,16 +3,14 @@ import Navbar from './Navbar';
 import MovieLibrary from './MovieLibrary';
 import MovieSummary from './MovieSummary';
 import './App.css';
-
+import { Route } from 'react-router-dom';
 
 class App extends Component {
   constructor() {
   super()
     this.state = {
       movies: [],
-      movieSummary: null,
       loading: false,
-      movieSummaryLoading: false,
       error: false
     }
   }
@@ -39,28 +37,31 @@ componentDidMount = () => {
       })
 }
 
-fetchSpecificMovie = (id) => {
-  this.setState({
-    movieSummaryLoading: true
-  })
-  fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-    .then(res => res.json())
-    .then(movie => {
-      this.setState({
-        movieSummary: movie.movie
-      })
-    })
-    .catch(error => {
-      this.setState({
-        error: true
-      })
-    })
-    .finally(() => {
-      this.setState({
-       movieSummaryLoading: false
-      })
-    })
-}
+// fetchSpecificMovie = (id) => {
+//   this.setState({
+//     movieSummaryLoading: true
+//   })
+//   fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
+//     .then(res => res.json())
+//     .then(movie => {
+
+//       this.setState( prevState => {
+//         return {...prevState, 
+//         movieSummary: movie.movie}
+//       })
+//       console.log(this.state.movieSummary)
+//     })
+//     .catch(error => {
+//       this.setState({
+//         error: true
+//       })
+//     })
+//     .finally(() => {
+//       this.setState({
+//        movieSummaryLoading: false
+//       })
+//     })
+// }
 
   returnToMain = () => {
     this.setState({movieSummary: null}
@@ -76,16 +77,10 @@ render() {
     <Navbar data-cy="navbar"/>
     {this.state.error && <h1>SERIOUS PROBLEM!!! Please refresh.</h1>}
 
-    {this.state.movieSummary 
-    ? 
-    (<MovieSummary movieSummary={this.state.movieSummary} 
-    returnToMain={this.returnToMain}/>) 
-    : 
-    (<MovieLibrary movies={this.state.movies} 
-    fetchSpecificMovie={this.fetchSpecificMovie}/>)}
-
-    {this.state.movieSummary ? (<MovieSummary movieSummary={this.state.movieSummary} returnToMain={this.returnToMain}/>) : (<MovieLibrary movies={this.state.movies} fetchSpecificMovie={this.fetchSpecificMovie}/>)}
-
+    <Route exact path='/' render={() => <MovieLibrary movies={this.state.movies} 
+    fetchSpecificMovie={this.fetchSpecificMovie}/>} />
+    <Route path='/movies/:id' render={({match})=> {
+      return <MovieSummary id={match.params.id}/>}}/>
     </main>
   )
 }
