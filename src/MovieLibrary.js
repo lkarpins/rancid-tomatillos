@@ -3,11 +3,10 @@ import Movie from "./Movie";
 import './MovieLibrary.css'
 
 
-const MovieLibrary = ({ movies, fetchSpecificMovie}) => {
+const MovieLibrary = ({ movies }) => {
    const getMovie = movies.map(movie => {
     return (
         <Movie 
-        {...movies}
         id={movie.id}
         key={movie.id}
         poster_path={movie.poster_path}
@@ -15,7 +14,6 @@ const MovieLibrary = ({ movies, fetchSpecificMovie}) => {
         title={movie.title}
         average_rating={movie.average_rating}
         release_date={movie.release_date}
-        fetchSpecificMovie={fetchSpecificMovie}
         data-cy="movie"
         />
     )
