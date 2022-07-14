@@ -44,7 +44,7 @@ render() {
   return (
     <main className='App'>
     <Navbar data-cy="navbar"/>
-    {this.state.error && <h1>SERIOUS PROBLEM!!! Please refresh.</h1>}
+    {this.state.error && <h1 data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
 
     <Route exact path='/' render={() => <MovieLibrary movies={this.state.movies} 
     fetchSpecificMovie={this.fetchSpecificMovie}/>} />

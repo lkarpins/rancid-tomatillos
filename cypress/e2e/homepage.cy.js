@@ -34,7 +34,12 @@ beforeEach(() => {
     .url().should('include', '/movies/694919')
   })
 
+  
+  it('Should display error message when there is a server error', () => {
+    cy.visit("http://localhost:3000/doadnfjajfapvcae")
+  
+    cy.get('[data-cy="error"]').contains('Uh oh! Something went wrong, please try again!')
+    })
+
+  })
 //sad path for async, intercept get with wrong url, display error component
-
-})
-

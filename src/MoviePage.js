@@ -17,8 +17,8 @@ const MoviePage = ({ movie }) => {
             <p data-cy="summary-rating" >⭐️ {rating}</p>
             <p data-cy="summary-release">Release Date: {movie.release_date}</p>
             <p data-cy="summary-overview">Overview: {movie.overview}</p>
-            <p data-cy="summary-genre">Genres: {genres}</p>
-            <p>Budget: {
+            <p data-cy="summary-genres">Genres: {genres}</p>
+            <p data-cy="summary-budget">Budget: {
             new Intl.NumberFormat('en-US',
             { style: 'currency', currency: 'USD' }
             ).format(movie.budget)}</p>
