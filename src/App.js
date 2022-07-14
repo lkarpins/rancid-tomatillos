@@ -37,37 +37,6 @@ componentDidMount = () => {
       })
 }
 
-// fetchSpecificMovie = (id) => {
-//   this.setState({
-//     movieSummaryLoading: true
-//   })
-//   fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${id}`)
-//     .then(res => res.json())
-//     .then(movie => {
-
-//       this.setState( prevState => {
-//         return {...prevState, 
-//         movieSummary: movie.movie}
-//       })
-//       console.log(this.state.movieSummary)
-//     })
-//     .catch(error => {
-//       this.setState({
-//         error: true
-//       })
-//     })
-//     .finally(() => {
-//       this.setState({
-//        movieSummaryLoading: false
-//       })
-//     })
-// }
-
-  returnToMain = () => {
-    this.setState({movieSummary: null}
-      )
-  }
-
 render() {
   if (this.state.loading) {
     return <p>LOADING!!!</p>
