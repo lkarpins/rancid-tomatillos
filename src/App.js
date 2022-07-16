@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
+import Form from './Form';
 import MovieLibrary from './MovieLibrary';
 import MovieSummary from './MovieSummary';
 import './App.css';
@@ -39,7 +39,8 @@ render() {
   }
   return (
     <main className='App'>
-    <Navbar data-cy="navbar"/>
+      <header className="header" >Rancid Tomatillos!</header>
+    <Form data-cy="form"/>
     {this.state.error && <h1 data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
 
     <Route exact path='/' render={() => <MovieLibrary movies={this.state.movies} 
