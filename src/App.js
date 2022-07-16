@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import Navbar from './Navbar';
 import MovieLibrary from './MovieLibrary';
 import MovieSummary from './MovieSummary';
+import './index.css'
 import './App.css';
 import { Route } from 'react-router-dom';
 
@@ -11,7 +11,8 @@ class App extends Component {
     this.state = {
       movies: [],
       loading: false,
-      error: false
+      error: false,
+      filteredMovies: [],
     }
   }
   
@@ -33,18 +34,41 @@ componentDidMount = () => {
       })
 }
 
+searchMovies = (event) => {
+  const { value }  = event.target
+  const searchedMovies = this.state.movies.filter(movie => {
+    if (movie.title.toLowerCase().includes(value.toLowerCase())) {
+      return movie
+    }
+  })
+  this.setState({filteredMovies: searchedMovies})
+  }
+
+  selectMoviesToRender = () => {
+    return !this.state.filteredMovies.length ? this.state.movies : this.state.filteredMovies
+  }
+
+
 render() {
   if (this.state.loading) {
     return <p>LOADING!!!</p>
   }
   return (
     <main className='App'>
-    <Navbar data-cy="navbar"/>
     {this.state.error && <h1 data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
+      <header className="header" >Rancid Tomatillos!</header>
 
-    <Route exact path='/' render={() => <MovieLibrary movies={this.state.movies} 
-    fetchSpecificMovie={this.fetchSpecificMovie}/>} />
-    <Route path='/movies/:id' render={({match})=> {
+    <Route exact path='/' render={() => <> <input
+    type='text'
+    placeholder="Search by Title"
+    name='search-form'
+    onChange={event => this.searchMovies(event)}
+    />
+    
+    <MovieLibrary movies={this.selectMoviesToRender()} 
+    fetchSpecificMovie={this.fetchSpecificMovie} />
+   </>}/>
+    <Route exact path='/movies/:id' render={({match})=> {
       return <MovieSummary id={match.params.id}/>}}/>
     </main>
   )

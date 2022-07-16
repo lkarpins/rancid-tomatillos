@@ -1,8 +1,22 @@
+
 .App {
   text-align: center;
   overflow: auto;
   color: gold;
   margin: 0; 
+}
+
+.header {
+  font-family: 'Codystar', cursive;
+  font-size: 50px;
+}
+
+
+input {
+  margin: 5px; 
+  width: 30%;
+  border: 2px solid black;
+  font-size: 18px;
 }
 
 img {

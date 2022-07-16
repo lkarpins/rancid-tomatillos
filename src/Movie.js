@@ -1,7 +1,7 @@
 import React from "react";
 import './Movie.css'
 import { Link } from "react-router-dom"
-const Movie = ({ title, id, poster_path, average_rating,}) => {
+const Movie = ({ title, id, poster_path, average_rating}) => {
     return (
         <div className="movie" data-cy="movie">
             <h2 data-cy='movie-title'>{title}</h2>
