@@ -12,23 +12,23 @@ const MoviePage = ({ movie }) => {
     };
     return (
         <div className="movie-page">
-            <h2>{movie.title}</h2>
-            <img className='backdrop-image' src={movie.backdrop_path} alt={movie.backdrop_path}/>
-            <p>⭐️ {rating}</p>
-            <p>Release Date: {movie.release_date}</p>
-            <p>Overview: {movie.overview}</p>
-            <p>Genres: {genres}</p>
-            <p>Budget: {
+            <h2 data-cy="summary-title">{movie.title}</h2>
+            <img className='backdrop-image' data-cy="summary-backdrop" src={movie.backdrop_path} alt={movie.backdrop_path}/>
+            <p data-cy="summary-rating" >⭐️ {rating}</p>
+            <p data-cy="summary-release">Release Date: {movie.release_date}</p>
+            <p data-cy="summary-overview">Overview: {movie.overview}</p>
+            <p data-cy="summary-genres">Genres: {genres}</p>
+            <p data-cy="summary-budget">Budget: {
             new Intl.NumberFormat('en-US',
             { style: 'currency', currency: 'USD' }
             ).format(movie.budget)}</p>
-            <p>Revenue: {new Intl.NumberFormat('en-US',
+            <p data-cy="summary-revenue">Revenue: {new Intl.NumberFormat('en-US',
             { style: 'currency', currency: 'USD' }
             ).format(movie.revenue)}</p>
-            <p>Runtime: {movie.runtime} minutes</p>
-            <p>Tagline: "{movie.tagline}"</p>
+            <p data-cy="summary-runtime">Runtime: {movie.runtime} minutes</p>
+            <p data-cy="summary-tagline">Tagline: "{movie.tagline}"</p>
             <NavLink to='/'>
-                 <button >Return to Main</button> 
+                 <button data-cy="summary-return-button">Return to Main</button> 
             </NavLink>
         </div>
     )
