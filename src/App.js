@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import MovieLibrary from './MovieLibrary';
 import MovieSummary from './MovieSummary';
+import './index.css'
 import './App.css';
 import { Route } from 'react-router-dom';
 

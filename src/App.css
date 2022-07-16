@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
   overflow: auto;
@@ -6,7 +7,8 @@
 }
 
 .header {
-font-size: 50px;
+  font-family: 'Codystar', cursive;
+  font-size: 50px;
 }
 
 
