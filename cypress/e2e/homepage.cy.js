@@ -6,7 +6,7 @@ beforeEach(() => {
 })
 
   it('Should be able to visit the page and render the title', () => {
-   cy.contains('h1', 'Rancid Tomatillos')
+   cy.contains('header', 'Rancid Tomatillos')
   })
 
   it('Should display all movies', () => {
@@ -34,5 +34,10 @@ beforeEach(() => {
     .url().should('include', '/movies/694919')
   })
 
-  
+  it('Should filter movies rendered by search', () => {
+    cy.get('[data-cy="search"]').type('sponge')
+    cy.get('[data-cy="movie-title"]').contains('The SpongeBob Movie: Sponge on the Run')
+
+  })
+
 })

@@ -60,6 +60,7 @@ render() {
 
     <Route exact path='/' render={() => <> <input
     type='text'
+    data-cy='search'
     placeholder="Search by Title"
     name='search-form'
     onChange={event => this.searchMovies(event)}
