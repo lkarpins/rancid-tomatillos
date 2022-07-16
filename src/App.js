@@ -23,15 +23,11 @@ componentDidMount = () => {
     fetch('https://rancid-tomatillos.herokuapp.com/api/v2/movies')
       .then(res => res.json())
       .then(movies => {
-        this.setState({movies: movies.movies})
+        this.setState({movies: movies.movies, loading: false})
       })
       .catch(error => {
         this.setState({
           error: true,
-        })
-      })
-      .finally(() => {
-        this.setState({
           loading: false
         })
       })
