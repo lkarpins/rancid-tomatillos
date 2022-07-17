@@ -10,7 +10,7 @@ beforeEach(() => {
   })
 
   it('Should display all movies', () => {
-    cy.get('[data-cy="movie"]').should('have.length', 40)
+    cy.get('[data-cy="movie"]').should('have.length', 4)
   })
 
   it('Should display rendered movie titles', () => {
@@ -37,7 +37,6 @@ beforeEach(() => {
   it('Should filter movies rendered by search', () => {
     cy.get('[data-cy="search"]').type('sponge')
     cy.get('[data-cy="movie-title"]').contains('The SpongeBob Movie: Sponge on the Run')
-
   })
 
 })

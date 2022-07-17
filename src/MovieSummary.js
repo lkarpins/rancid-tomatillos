@@ -10,43 +10,44 @@ class MovieSummary extends Component {
       this.state = {
         movie: {},
         loading: false,
-        error: false
+        error: false,
+        video: []
       }
     }
 
-
     componentDidMount = () => {
-        console.log(this.props.id)
-        this.setState(prevState => {
-            return { 
-          ...prevState, loading: true
-        }})
-        fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.id}`)
-          .then(res => res.json())
-          .then(movie => {
-      
-            this.setState(prevState => {
-                return {
-              ...prevState, movie: movie.movie, loading: false
-            }})
-            console.log(this.state.movie)
+      this.setState(prevState => {
+          return { 
+        ...prevState, loading: true
+      }})
+      Promise.all([fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.id}`),
+       fetch(`https://rancid-tomatillos.herokuapp.com/api/v2/movies/${this.props.id}/videos`)])
+        .then(([res1, res2]) => {
+          return Promise.all([res1.json(), res2.json()])
         })
-          .catch(error => {
-            this.setState(prevState => {
+        .then(([res1, res2]) => {
+          this.setState(prevState => {
               return {
-            ...prevState, error: true
-            }})
-          })
-          }
-      
+            ...prevState, movie: res1.movie, loading: false, video: res2.videos
+          }})
+      })
+        .catch(error => {
+          this.setState(prevState => {
+            return {
+          ...prevState, error: true
+          }})
+        })
+        
+        }
+    
 
       render() {
         if (this.state.loading) {
-          return <p>LOADING!!!</p>
+          return <p className='loading'>LOADING!!!</p>
         }
         return (
           <main className='MovieSummary'>
-              <MoviePage movie={this.state.movie} />
+              <MoviePage movie={this.state.movie} video={this.state.video}/>
           </main>
         )
       }
