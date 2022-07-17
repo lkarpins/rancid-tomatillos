@@ -9,6 +9,9 @@
 .wrapper { 
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .line {
@@ -24,11 +27,12 @@
 .movie-page {
     display: flex;
     flex-direction: column;
-    background-color: rgb(206, 206, 208);
+    background-color: rgb(57, 1, 1);
     border-radius: 3%;
     box-shadow: 4px 0px 8px 4px rgba(231, 229, 229, 0.8);
     width: 50vw;
     margin-right: 2em;
+    color: silver
 }
 
 
