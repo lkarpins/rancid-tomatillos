@@ -2,7 +2,7 @@ import React from "react";
 import './MoviePage.css';
 import { NavLink } from 'react-router-dom';
 
-const MoviePage = ({ movie }) => {
+const MoviePage = ({ movie , video }) => {
     let genres, rating; 
     if (movie.genres) {
          genres = movie.genres.join(', ')};
@@ -10,27 +10,57 @@ const MoviePage = ({ movie }) => {
     if (movie.average_rating) {
         rating = movie.average_rating.toFixed(1)
     };
+
+    if(movie.tagline === '') {
+        movie.tagline = 'N/A'
+    }
+   
     return (
+        <>
+        <img className='backdrop-image' data-cy="summary-backdrop" src={movie.backdrop_path} alt={movie.backdrop_path}/>
+        <div className="wrapper">
         <div className="movie-page">
-            <h2 data-cy="summary-title">{movie.title}</h2>
-            <img className='backdrop-image' data-cy="summary-backdrop" src={movie.backdrop_path} alt={movie.backdrop_path}/>
-            <p data-cy="summary-rating" >⭐️ {rating}</p>
-            <p data-cy="summary-release">Release Date: {movie.release_date}</p>
-            <p data-cy="summary-overview">Overview: {movie.overview}</p>
-            <p data-cy="summary-genres">Genres: {genres}</p>
-            <p data-cy="summary-budget">Budget: {
+            <h3 className="head">{movie.title}</h3>
+            <hr className="line"></hr>
+            <p className="rating" data-cy="summary-rating" ><b className="bold">Average Rating: </b> ⭐️ <b>{rating}</b></p>
+            <hr className="line"></hr>
+            <p className="release" data-cy="summary-release"><b className="bold">Release Date: </b>{movie.release_date}</p>
+            <hr className="line"></hr>
+            <p className="genres" data-cy="summary-genres"><b className="bold">Genres: </b> {genres}</p>
+            <hr className="line"></hr>
+            <p className="budget "data-cy="summary-budget">
+            <b className="bold">Budget: </b> 
+            {
             new Intl.NumberFormat('en-US',
-            { style: 'currency', currency: 'USD' }
-            ).format(movie.budget)}</p>
-            <p data-cy="summary-revenue">Revenue: {new Intl.NumberFormat('en-US',
+            { style: 'currency', 
+            currency: 'USD' }
+            ).format(movie.budget)}
+            </p>
+            <hr className="line"></hr>
+            <p className="revenue" data-cy="summary-revenue"><b className="bold">Revenue: </b> {new Intl.NumberFormat('en-US',
             { style: 'currency', currency: 'USD' }
             ).format(movie.revenue)}</p>
-            <p data-cy="summary-runtime">Runtime: {movie.runtime} minutes</p>
-            <p data-cy="summary-tagline">Tagline: "{movie.tagline}"</p>
+              <hr className="line"></hr>
+            <p className="runtime" data-cy="summary-runtime"><b className="bold">Runtime: </b> {movie.runtime} minutes</p>
+            <hr className="line"></hr>
+            <p className="tagline" data-cy="summary-tagline"><b className="bold">Tagline: </b> "{movie.tagline}"</p>
+            <hr className="line"></hr>
+            <p className="overview" data-cy="summary-overview"><b className="bold">Overview: </b>{movie.overview}</p>
+            <hr className="line"></hr>
             <NavLink to='/'>
-                 <button data-cy="summary-return-button">Return to Main</button> 
+                 <button className="return" data-cy="summary-return-button">Home</button> 
             </NavLink>
         </div>
+            <iframe width="700"
+             height="500" 
+             src={`https://www.youtube.com/embed/${video.map(key => key.key)[0]}`}    
+             title="YouTube video player" 
+             frameBorder="0" 
+             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+             allowFullScreen>
+            </iframe>
+            </div>
+        </>
     )
 }
 

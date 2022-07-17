@@ -9,3 +9,12 @@
     cursor: pointer;
     width: 20vw;
 }
+
+.movie-poster:hover {
+    transform: scale(1.05);
+    box-shadow: 10px 10px 10px rgb(175, 169, 167);
+}
+
+.ratings {
+    color: rgb(205, 205, 205);
+}

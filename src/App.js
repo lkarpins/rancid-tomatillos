@@ -51,21 +51,25 @@ searchMovies = (event) => {
 
 render() {
   if (this.state.loading) {
-    return <p>LOADING!!!</p>
+    return <p className='loading'>LOADING!!!</p>
   }
   return (
     <main className='App'>
     {this.state.error && <h1 data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
-      <header className="header" >Rancid Tomatillos!</header>
-
-    <Route exact path='/' render={() => <> <input
+      <header className="header">Rancid Tomatillos</header>
+      
+    <Route exact path='/' render={() => <><label className="label" for="search-from">Search Movies: <br></br>
+    <input
     type='text'
     data-cy='search'
     placeholder="Search by Title"
     name='search-form'
+    className='input'
+    aria-label='search movies'
     onChange={event => this.searchMovies(event)}
     />
-    
+    </label>
+
     <MovieLibrary movies={this.selectMoviesToRender()} 
     fetchSpecificMovie={this.fetchSpecificMovie} />
    </>}/>

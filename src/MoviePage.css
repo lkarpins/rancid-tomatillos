@@ -1,3 +1,65 @@
 .backdrop-image {
-    width: 35vw;
+    width: 70%;
+    height: 65vh;
+    margin-bottom: 3em;
+    border-radius: 1%;
+    box-shadow: 4px 0px 8px 4px rgba(231, 229, 229, 0.8);
+}
+
+.wrapper { 
+    display: flex;
+    justify-content: space-between;
+}
+
+.line {
+    width: 99%;
+    border-color: rgb(0,0,0, 0.2)
+}
+
+
+.head {
+    text-align: center;
+}
+
+.movie-page {
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(206, 206, 208);
+    border-radius: 3%;
+    box-shadow: 4px 0px 8px 4px rgba(231, 229, 229, 0.8);
+    width: 50vw;
+    margin-right: 2em;
+}
+
+
+p { 
+    margin: 0;
+}
+
+iframe {
+    box-shadow: 0px 4px 8px 8px rgba(231, 229, 229, 0.8);
+    border-radius: 3%;
+}
+
+
+button {
+    border-color: rgba(230, 222, 222, 0.8);
+    color: #fff;
+    box-shadow: 0 0 40px 40px #390905 inset, 0 0 0 0 #feffff;
+    -webkit-transition: all 150ms ease-in-out;
+    transition: all 150ms ease-in-out;
+    border-radius: 2%;
+    width: 12vw;
+    font-family: 'Abel', sans-serif;
+    font-size: 19px;
+  }
+
+button:hover {
+    box-shadow: 0 0 10px 0 #ffffff inset, 0 0 10px 4px #909090;
+    color: black;
+    cursor: pointer;
+  }
+
+.trailer {
+    display: flex;
 }

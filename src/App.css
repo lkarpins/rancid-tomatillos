@@ -2,28 +2,82 @@
 .App {
   text-align: center;
   overflow: auto;
-  color: gold;
   margin: 0; 
+  font-family: 'Abel', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+.loading {
+  font-family: 'Abel', sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  color: whitesmoke
+}
+
+.label {
+  color: rgb(205, 205, 205);
+  font-weight: 800;
 }
 
 .header {
-  font-family: 'Codystar', cursive;
-  font-size: 50px;
+  font-family: 'Monoton', cursive;
+  font-size: 4em;
+  font-weight: 400;
+  color: silver;
+    /* background-color: rgb(73, 7, 7); */
+  background-color: rgb(57, 1, 1);
+  margin-bottom: .25em;
+  text-shadow: 
+  0 0 2px #fff ,
+  0 0 10px #fff ,
+  0 0 20px #7f0101 ,
+  0 0 82px #7f0101 ,
+  0 0 100px #7f0101 ,
+  0 0 150px #7f0101
 }
 
+.main-line {
+  width: 100%;
+  border-color: aliceblue;
+}
 
 input {
-  margin: 5px; 
-  width: 30%;
+  margin-top: 20px; 
+  margin-bottom: 35px;
+  width: 22%;
   border: 2px solid black;
   font-size: 18px;
+  text-align: center;
+  background-color:  rgb(175, 169, 167);
+  border-radius: 5%;
 }
 
 img {
   width: 20vw;
+  margin-bottom: 1em;
+  margin-top: 1em;
+  border: 2px solid whitesmoke;
 }
-
+/* 
 html {
   background-image: url('/public/curtain.jpg');
+} */
+/* 
+html {
+    background: linear-gradient(136deg, #000000, #0d0d0d, #560f47, #900e83, #000000);
+    background-size: 1000% 1000%;
+    animation: AnimationName 32s ease infinite;
+}
+@keyframes AnimationName {
+    0%{background-position:15% 0%}
+    50%{background-position:86% 100%}
+    100%{background-position:15% 0%}
+} */
+
+html {
+
+  background-color: black;
+
 }
 
