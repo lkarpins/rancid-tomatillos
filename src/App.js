@@ -48,9 +48,6 @@ searchMovies = (event) => {
     return !this.state.filteredMovies.length ? this.state.movies : this.state.filteredMovies
   }
 
-  clearInput = () => {
-    
-  }
 
 render() {
   if (this.state.loading) {
@@ -77,7 +74,7 @@ render() {
     fetchSpecificMovie={this.fetchSpecificMovie} />
    </>}/>
     <Route exact path='/movies/:id' render={({match})=> {
-      return <MovieSummary id={match.params.id}/>}}/>
+      return <MovieSummary id={match.params.id} filteredMovies={this.state.filteredMovies = []}/>}}/>
     </main>
   )
 }
