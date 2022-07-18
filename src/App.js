@@ -48,6 +48,9 @@ searchMovies = (event) => {
     return !this.state.filteredMovies.length ? this.state.movies : this.state.filteredMovies
   }
 
+  clearInput = () => {
+    
+  }
 
 render() {
   if (this.state.loading) {
