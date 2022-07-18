@@ -1,6 +1,7 @@
 ![Screen Shot 2022-07-18 at 2 27 30 PM](https://user-images.githubusercontent.com/99596577/179578356-c474f225-8b3e-41a5-ae0b-5b9a85681912.png)
 
 
+
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
@@ -25,7 +26,11 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 
 ## Illustrations 
-![Preview](https://media.giphy.com/media/ML4pushSKRTV2vsLn0/giphy.gif)
+#### Home Page
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/99596577/179619028-87a4ab2c-2608-4c89-84cb-e4b93a96cd12.gif)
+
+#### Search Bar Functionality 
+
 
 ## Technologies and Tools
 
