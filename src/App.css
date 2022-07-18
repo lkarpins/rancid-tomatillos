@@ -20,12 +20,21 @@
   font-weight: 800;
 }
 
+.error-message {
+  color:rgb(205, 205, 205);
+}
+
+input[type="text"], textarea {
+
+  background-color : #d1d1d1; 
+
+}
+
 .header {
   font-family: 'Monoton', cursive;
   font-size: 4em;
   font-weight: 400;
   color: silver;
-    /* background-color: rgb(73, 7, 7); */
   background-color: rgb(57, 1, 1);
   margin-bottom: .25em;
   text-shadow: 
@@ -59,25 +68,8 @@ img {
   margin-top: 1em;
   border: 2px solid whitesmoke;
 }
-/* 
-html {
-  background-image: url('/public/curtain.jpg');
-} */
-/* 
-html {
-    background: linear-gradient(136deg, #000000, #0d0d0d, #560f47, #900e83, #000000);
-    background-size: 1000% 1000%;
-    animation: AnimationName 32s ease infinite;
-}
-@keyframes AnimationName {
-    0%{background-position:15% 0%}
-    50%{background-position:86% 100%}
-    100%{background-position:15% 0%}
-} */
 
 html {
-
   background-color: black;
-
 }
 
