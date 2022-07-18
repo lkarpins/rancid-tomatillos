@@ -24,6 +24,9 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 * Make network requests to API endpoints to retrieve and manipulate data
 
 
+## Illustrations 
+![Preview](https://media.giphy.com/media/ML4pushSKRTV2vsLn0/giphy.gif)
+
 ## Technologies and Tools
 
 * JavaScript
