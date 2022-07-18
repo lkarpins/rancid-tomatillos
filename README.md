@@ -30,6 +30,7 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/99596577/179619028-87a4ab2c-2608-4c89-84cb-e4b93a96cd12.gif)
 
 #### Search Bar Functionality 
+![ezgif com-gif-maker (2)](https://user-images.githubusercontent.com/99596577/179620789-e6c58dbb-d7cc-4d62-897c-b3fc5fce3a6f.gif)
 
 
 ## Technologies and Tools
