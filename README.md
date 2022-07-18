@@ -29,6 +29,7 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 * JavaScript
 * React
+* React Router
 * HTML
 * CSS
 * Cypress
