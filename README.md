@@ -46,10 +46,10 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 Future features could include:
 
 * Adding functionality to allow a user to add personal ratings
-* User favorite movies section
+* Add functionality for user favorite movies feature
 * A "theatre-suite" where movies can be added using POST
-* Add more error-handling to search-bar prevent notify the user that there are no matches
-* Prevent movie details from rendering $0.0 for budget and revenue to instead render "No data available"
+* Add more error-handling to search-bar to notify the user that there are no matches
+* Prevent movie details from rendering empty data to instead render "No data available"
 
 ## Setup
 1. Fork and clone this repository
