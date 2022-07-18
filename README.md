@@ -18,8 +18,6 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 ## Learning Goals
 
-### Part 1
-
 * Gain competency with React fundamentals and continue using ES6 syntax
 * Create a multi-page UX using React Router
 * Learn how to test React components & asynchronous JS using Cypress
