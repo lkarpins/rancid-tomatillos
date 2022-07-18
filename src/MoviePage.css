@@ -9,6 +9,9 @@
 .wrapper { 
     display: flex;
     justify-content: space-between;
+    margin-bottom: 2em;
+    margin-left: 2em;
+    margin-right: 2em;
 }
 
 .line {
@@ -16,21 +19,22 @@
     border-color: rgb(0,0,0, 0.2)
 }
 
-
 .head {
     text-align: center;
+    font-size: 35px;
+    margin: .1em;
 }
 
 .movie-page {
     display: flex;
     flex-direction: column;
-    background-color: rgb(206, 206, 208);
+    background-color: rgb(57, 1, 1);
     border-radius: 3%;
     box-shadow: 4px 0px 8px 4px rgba(231, 229, 229, 0.8);
     width: 50vw;
     margin-right: 2em;
+    color: silver
 }
-
 
 p { 
     margin: 0;
@@ -40,7 +44,6 @@ iframe {
     box-shadow: 0px 4px 8px 8px rgba(231, 229, 229, 0.8);
     border-radius: 3%;
 }
-
 
 button {
     border-color: rgba(230, 222, 222, 0.8);
@@ -52,6 +55,7 @@ button {
     width: 12vw;
     font-family: 'Abel', sans-serif;
     font-size: 19px;
+    margin-bottom: 1em;
   }
 
 button:hover {

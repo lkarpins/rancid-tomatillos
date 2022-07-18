@@ -2,7 +2,6 @@ import React from "react";
 import Movie from "./Movie";
 import './MovieLibrary.css'
 
-
 const MovieLibrary = ({ movies }) => {
    const getMovie = movies.map(movie => {
     return (
@@ -14,7 +13,6 @@ const MovieLibrary = ({ movies }) => {
         title={movie.title}
         average_rating={movie.average_rating}
         release_date={movie.release_date}
-        hidden={movie.hidden}
         data-cy="movie"
         />
     )

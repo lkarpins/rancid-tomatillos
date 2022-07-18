@@ -13,20 +13,16 @@ beforeEach(() => {
     cy.get('[data-cy="movie"]').should('have.length', 4)
   })
 
-  it('Should display rendered movie titles', () => {
-    cy.get('[data-cy="movie-title"]').contains('Money Plane')
-    cy.get('[data-cy="movie-title"]').contains('Mulan')
-    cy.get('[data-cy="movie-title"]').contains('SpongeBob')
-  })
-
   it('Should display rendered movie poster images', () => {
     cy.get('[data-cy="movie-image"]').should('be.visible')
   })
 
   it('Should display rendered movie ratings' , () => {
     cy.get('[data-cy="movie-rating"]').contains(6.9)
-    cy.get('[data-cy="movie-rating"]').contains(7.3)
     cy.get('[data-cy="movie-rating"]').contains(5.1)
+    cy.get('[data-cy="movie-rating"]').contains(7.3)
+    cy.get('[data-cy="movie-rating"]').contains(5.9)
+
   })
 
   it('Should display movie summary when a movie is clicked', () => {
@@ -35,8 +31,8 @@ beforeEach(() => {
   })
 
   it('Should filter movies rendered by search', () => {
-    cy.get('[data-cy="search"]').type('sponge')
-    cy.get('[data-cy="movie-title"]').contains('The SpongeBob Movie: Sponge on the Run')
+    cy.get('[data-cy="search"]').type('mulan')
+    cy.get('[data-cy="movie"]').should('have.length', 1)
   })
 
 })

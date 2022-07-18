@@ -16,7 +16,6 @@ class App extends Component {
     }
   }
   
- 
 componentDidMount = () => {
     this.setState({
       loading: true
@@ -48,16 +47,14 @@ searchMovies = (event) => {
     return !this.state.filteredMovies.length ? this.state.movies : this.state.filteredMovies
   }
 
-
 render() {
   if (this.state.loading) {
     return <p className='loading'>LOADING!!!</p>
   }
   return (
     <main className='App'>
-    {this.state.error && <h1 data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
+    {this.state.error && <h1 className="error-message" data-cy="error">Uh oh! Something went wrong, please try again!</h1>}
       <header className="header">Rancid Tomatillos</header>
-      
     <Route exact path='/' render={() => <><label className="label" for="search-from">Search Movies: <br></br>
     <input
     type='text'
@@ -69,12 +66,11 @@ render() {
     onChange={event => this.searchMovies(event)}
     />
     </label>
-
     <MovieLibrary movies={this.selectMoviesToRender()} 
-    fetchSpecificMovie={this.fetchSpecificMovie} />
+   />
    </>}/>
     <Route exact path='/movies/:id' render={({match})=> {
-      return <MovieSummary id={match.params.id}/>}}/>
+      return <MovieSummary id={match.params.id} filteredMovies={this.state.filteredMovies = []}/>}}/>
     </main>
   )
 }
