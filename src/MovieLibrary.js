@@ -2,7 +2,6 @@ import React from "react";
 import Movie from "./Movie";
 import './MovieLibrary.css'
 
-
 const MovieLibrary = ({ movies }) => {
    const getMovie = movies.map(movie => {
     return (
