@@ -14,7 +14,6 @@ const MovieLibrary = ({ movies }) => {
         title={movie.title}
         average_rating={movie.average_rating}
         release_date={movie.release_date}
-        hidden={movie.hidden}
         data-cy="movie"
         />
     )
