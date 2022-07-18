@@ -5,6 +5,7 @@
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
+- [Illustrations](#illustrations)
 - [Technologies and Tools](#technologies-and-tools)
 - [Roadmap](#roadmap)
 - [Setup](#setup)
@@ -26,6 +27,7 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 
 
 ## Illustrations 
+
 #### Home Page
 ![ezgif com-gif-maker](https://user-images.githubusercontent.com/99596577/179619028-87a4ab2c-2608-4c89-84cb-e4b93a96cd12.gif)
 
@@ -54,10 +56,13 @@ The [Turing School of Software and Design](https://turing.edu/) provided a proje
 Future features could include:
 
 * Adding functionality to allow a user to add personal ratings
-* Add functionality for user favorite movies feature
+* Adding feature for users to add movies to 'favorites'
 * A "theatre-suite" where movies can be added using POST
-* Add more error-handling to search-bar to notify the user that there are no matches
-* Prevent movie details from rendering empty data to instead render "No data available"
+
+Improvements
+
+* Adding error-handling for search-bar if user types unexpected characters or titles
+* Rendering 'no data available' for movie details missing values from API 
 
 ## Setup
 1. Fork and clone this repository
