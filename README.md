@@ -1,8 +1,6 @@
 ![Screen Shot 2022-07-18 at 2 27 30 PM](https://user-images.githubusercontent.com/99596577/179578356-c474f225-8b3e-41a5-ae0b-5b9a85681912.png)
 
 
-// Deployed Link and Giphy here
-
 ## Table of Contents
 - [Project Overview](#project-overview)
 - [Learning Goals](#learning-goals)
