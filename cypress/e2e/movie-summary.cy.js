@@ -6,7 +6,7 @@ describe('Movie Summary Page', () => {
   })
 
   it('Should display page title', () => {
-    cy.contains('h1', 'Rancid Tomatillos')
+    cy.contains('header', 'Rancid Tomatillos')
   })
 
   it('Should display movie summary title', () => {
@@ -51,6 +51,10 @@ describe('Movie Summary Page', () => {
 
   it('Should display movie backdrop image', () => {
     cy.get('[data-cy="summary-backdrop"]').should('be.visible')
+  })
+
+  it('Should display movie trailer', () => {
+    cy.get('[data-cy="movie-trailer"]').should('be.visible')
   })
 
   it('Should return to main page on button click', () => {

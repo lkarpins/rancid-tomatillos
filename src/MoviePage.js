@@ -20,7 +20,7 @@ const MoviePage = ({ movie , video }) => {
         <img className='backdrop-image' data-cy="summary-backdrop" src={movie.backdrop_path} alt={movie.backdrop_path}/>
         <div className="wrapper">
         <div className="movie-page">
-            <h3 className="head">{movie.title}</h3>
+            <h3 className="head" data-cy="summary-title" >{movie.title}</h3>
             <hr className="line"></hr>
             <p className="rating" data-cy="summary-rating" ><b className="bold">Average Rating: </b> ⭐️ <b>{rating}</b></p>
             <hr className="line"></hr>
@@ -51,7 +51,9 @@ const MoviePage = ({ movie , video }) => {
                  <button className="return" data-cy="summary-return-button">Home</button> 
             </NavLink>
         </div>
-            <iframe width="700"
+            <iframe
+             data-cy="movie-trailer"
+             width="700"
              height="500" 
              src={`https://www.youtube.com/embed/${video.map(key => key.key)[0]}`}    
              title="YouTube video player" 
